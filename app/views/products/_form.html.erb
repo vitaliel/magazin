@@ -1,0 +1,22 @@
+<%= form_for @product do |f| %>
+   <%= @product.errors.full_messages.join "\n" %>
+
+	<p>
+		<b>Titlu</b> <br/>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<b>Prețul</b> <br/>
+		<%= f.number_field :price %>
+	</p>
+	<p>
+		<b>Descrierea</b> <br/>
+		<%= f.text_area :short_description, size: '60x5' %>
+	</p>
+	<p>
+		<b>Descrierea detaliată</b> <br/>
+		<%= f.text_area :description, size: '60x10' %>
+	</p>
+
+	<%= f.submit %> or <%= link_to 'Cancel', products_path %>
+<% end %>

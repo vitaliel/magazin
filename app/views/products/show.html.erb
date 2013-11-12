@@ -1,0 +1,16 @@
+<h1> Vizualizare produs </h1>
+<p>
+	<b>Titlu</b>: <%= @product.title %>
+</p>
+<p>
+	<b>Prețul</b>: <%= @product.price %>
+</p>
+<p>
+	<b>Descrierea</b>: <%= @product.short_description %>
+</p>
+<p>
+	<b>Descrierea detaliată</b>: <%= @product.description %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
